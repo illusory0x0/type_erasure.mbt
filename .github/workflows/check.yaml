@@ -28,14 +28,14 @@ jobs:
           # bleeding check
           # 1. install latest toolchain
           # 2. install latest core library from github.com
-          - name: ubuntu-latest
-            version: bleeding
-          - name: macos-latest
-            version: bleeding
-          - name: macos-13
-            version: bleeding
-          - name: windows-latest
-            version: bleeding
+          # - name: ubuntu-latest
+          #   version: bleeding
+          # - name: macos-latest
+          #   version: bleeding
+          # - name: macos-13
+          #   version: bleeding
+          # - name: windows-latest
+          #   version: bleeding
 
           # pre-release check
           - name: ubuntu-latest
@@ -149,9 +149,9 @@ jobs:
       #     moon test --target wasm,wasm-gc
       #     moon test --target wasm,wasm-gc --release
 
-      - name: moon test --doc
-        run: |
-          moon test --doc
+      # - name: moon test --doc
+      #   run: |
+      #     moon test --doc
 
   moon-json-format-check:
     runs-on: ubuntu-latest

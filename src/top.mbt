@@ -81,6 +81,11 @@ test "bind" {
     ys,
     content="[{val: 0.01}, {val: 1.01}, {val: 2.01}, {val: 3.01}, {val: 4.01}, {val: 5.01}, {val: 6.01}, {val: 7.01}, {val: 8.01}, {val: 9.01}]",
   )
+  let xs = Some(Ref::new(99))
+  let ys : Ref[Double]? = bind(xs, fn(x : Ref[Int]) {
+    Some(Ref::new(x.val.to_double().sqrt()))
+  })
+  inspect!(ys, content="Some({val: 9.9498743710662})")
 }
 
 ///|
